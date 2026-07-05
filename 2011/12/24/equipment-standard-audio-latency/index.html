@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Equipment Standard – Audio latency — Drums &amp; Electronics</title>
+<meta content="Equipment Standard – Audio latency" name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&amp;family=Manrope:wght@300..800&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css" rel="stylesheet"/>
+<link href="data:image/svg+xml;utf8,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;circle cx='16' cy='16' r='14' fill='%23c1272d'/&gt;&lt;/svg&gt;" rel="icon"/>
+</head>
+<body class="post-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+<a class="site-mark" href="/">
+<span aria-hidden="true" class="mark-disc"></span>
+<span class="mark-text"><em>Drums</em> &amp; Electronics</span>
+</a>
+<nav class="site-nav">
+<a href="/archive/">Archive</a>
+<a href="/about/">About</a>
+<a href="/project-description-long/">Project</a>
+</nav>
+</header>
+<main id="main">
+<article class="post">
+<header class="post-header">
+<p class="post-meta"><time datetime="2011-12-24">December 24, 2011</time> · <span class="post-cats">Reflections · Technical</span></p>
+<h1 class="post-title">Equipment Standard – Audio latency</h1>
+</header>
+<figure class="post-hero"><img alt="Equipment Standard – Audio latency" loading="eager" src="/wp-content/uploads/sites/8/2011/12/latencyheader_l.jpg"/></figure>
+<div class="post-body">
+
+<p>One of the first issues I wanted to look into when I started working on my master thesis was audio latency.</p>
+<p>Audio latency is the delay between when an audio signal enters and when it emerges from a system. Potential contributors to latency in an audio system include <a href="http://en.wikipedia.org/wiki/Analog-to-digital_conversion" title="Analog-to-digital conversion">analog-to-digital conversion</a>, <a href="http://en.wikipedia.org/wiki/Buffer_%28telecommunication%29" title="Buffer (telecommunication)">buffering</a>, <a href="http://en.wikipedia.org/wiki/Digital_signal_processing" title="Digital signal processing">digital signal processing</a>, <a href="http://en.wikipedia.org/wiki/Transmission_time" title="Transmission time">transmission time</a>, <a href="http://en.wikipedia.org/wiki/Digital-to-analog_conversion" title="Digital-to-analog conversion">digital-to-analog conversion</a> and the <a href="http://en.wikipedia.org/wiki/Speed_of_sound" title="Speed of sound">speed of sound</a> in air.</p>
+<p>The reason I wanted to look into this immediately is that I felt that for a drummer, being quite conscious about timing, this would be an essential aspect.</p>
+<p>To elaborate further:</p>
+<p>When playing with effects such as reverbs and other effects that lasts for a certain amount of time, I don’t feel that some milliseconds back or forth have any disadvantage, it could actually be an interesting musical aspect.</p>
+<p>But when it comes to triggering sounds, delays, looping, gating and other effects that have to react fast, audio latency is relevant.</p>
+<p>When I started testing this, I was very fixated on finding the sound card with the lowest latency and I thought that when I did, it would radically revolutionize my setup.</p>
+<p>With my current setup, I have to live with a total latency at about 8 milliseconds. What i gathered from my research (as shown below) is that I could obtain a latency at about 2 milliseconds with a certain, and quite affordable setup. That’s a difference of 6 milliseconds, let’s put that into context.</p>
+<p>In dry air at 20 °C, the speed of sound is 343.2 meters per second. That is 343.2/1000 = 0.3432 meters per millisecond ≈ one meter in 3 milliseconds. So the difference in audio latency between the two sound cards corresponds to two meters in distance to a sound source. Many guitarists have at least that distance to their amplifier. The distance from my drums to my ears could be close to a meter, that’s 3 milliseconds. What about a taller drummer than me, that would mean even more latency. From this reflections, I can’t conclude on anything else than that it’s all about habituation.</p>
+<p>So, to a certain extent one can get used to a fair amount of latency, you learn to press “loop” a little bit before you actually will loop, and you make sure you push the beat just a little bit when playing with delays or triggering samples. This definitely doesn’t have to be conscious, by practicing and listening, one adapts to this quite quickly.</p>
+<p>But compressors, gates and similar effects still demand low latency to operate at their best. When compressing drums, I don’t think you would want to add another 8 milliseconds before the compressor actually kicks inn. That’s why I completed the following test.</p>
+<p>First, a brief run trough of the parameters needed to control the latency.</p>
+<p>– Sampling rate:</p>
+<p>When analog audio is sent into the computer, it goes into an ADC (Analog-to-digital converter) which takes X <em>samples</em> of the audio per second. X is defined in hertz, is called the <em>sampling rate</em> and is usually at a value of 44’100 or above if you want to listen to Swedish-American engineer <a href="http://en.wikipedia.org/wiki/Harry_Nyquist" title="Harry Nyquist">Harry Nyquist</a> and how his theorem is described on Wikipedia:</p>
+<blockquote><p>In theory, a Nyquist frequency just larger than the signal bandwidth is sufficient to allow perfect reconstruction of the signal from the samples: see <a href="http://en.wikipedia.org/wiki/Sampling_theorem#Critical_frequency" title="Sampling theorem">Sampling theorem: Critical frequency</a>. However, this reconstruction requires an ideal filter that passes some frequencies unchanged while suppressing all others completely (commonly called a <a href="http://en.wikipedia.org/wiki/Brick-wall_filter" title="Brick-wall filter">brick-wall filter</a>). In practice, perfect reconstruction is unattainable. Some amount of aliasing is unavoidable.</p>
+<p>Signal frequencies higher than the Nyquist frequency will encounter a “folding” about the Nyquist frequency, back into lower frequencies. For example, if the sample rate is 20 kHz, the Nyquist frequency is 10 kHz, and an 11 kHz signal will fold, or alias, to 9 kHz. However, a 9 kHz signal can also fold up to 11 kHz in that case if the reconstruction filter is not adequate. Both types of aliasing can be important.</p>
+<p>When attainable filters are used, some degree of <a href="http://en.wikipedia.org/wiki/Oversampling" title="Oversampling">oversampling</a> is necessary to accommodate the practical constraints on <a href="http://en.wikipedia.org/wiki/Anti-aliasing_filter" title="Anti-aliasing filter">anti-aliasing filters</a>: instead of a brickwall, one has flat response in the <a href="http://en.wikipedia.org/wiki/Passband" title="Passband">passband</a> up to a point called the <a href="http://en.wikipedia.org/wiki/Cutoff_frequency" title="Cutoff frequency">cutoff frequency</a> or corner frequency, (pass all frequencies below there unchanged), then gradual <a href="http://en.wikipedia.org/wiki/Rolloff" title="Rolloff">rolloff</a> in a <a href="http://en.wikipedia.org/wiki/Transition_band" title="Transition band">transition band</a>, finally suppressing signals above a certain point completely or almost completely in the <a href="http://en.wikipedia.org/wiki/Stopband" title="Stopband">stopband</a>. Thus, frequencies close to the Nyquist frequency may be distorted in the sampling and reconstruction process, so the bandwidth should be kept below the Nyquist frequency by some margin (frequency <a href="http://en.wikipedia.org/wiki/Headroom_%28audio_signal_processing%29" title="Headroom (audio signal processing)">headroom</a>) that depends on the actual filters used.</p>
+<p>For example, audio <a href="http://en.wikipedia.org/wiki/Compact_disc" title="Compact disc">CDs</a> have a sampling frequency of <a href="http://en.wikipedia.org/wiki/44100_Hz" title="44100 Hz">44100 Hz</a>. The Nyquist frequency is therefore 22050 Hz, which is an upper bound on the highest frequency the data can unambiguously represent. If the chosen anti-aliasing filter (a <a href="http://en.wikipedia.org/wiki/Low-pass_filter" title="Low-pass filter">low-pass filter</a> in this case) has a <a href="http://en.wikipedia.org/wiki/Transition_band" title="Transition band">transition band</a> of 2000 Hz, then the <a href="http://en.wikipedia.org/wiki/Cut-off_frequency" title="Cut-off frequency">cut-off frequency</a> should be no higher than 20050 Hz to yield a signal with negligible power at frequencies of 22050 Hz and greater.</p></blockquote>
+<p>– Buffer size:</p>
+<p>A <em>buffer</em> in this contexts can be explained as how much time the computer can use for “processing” before we have to see or hear something happening and it is defined in <em>samples</em>. So, if the <em>buffer size</em> is 512 samples and the <em>sampling rate</em> is 44’100Hz, the <em>buffer</em> adds an additional delay of 512/44100 ≈ 0.012 = 12 milliseconds. The computer do need a <em>buffer</em>, how low you can go regarding <em>buffer size</em> depends on the computers cpu, ram and hdd speed but also, a really important factor is what audio interface (sound card) you are using. This is because all the manufacturers write their own drivers and have different ADC’s (analog-to-digital-converters) and DAC’s (digital-to-analog-converters), which are all major contributors to latency.</p>
+<p>The complete audio monitoring latency of a configuration, often referred to as the roundtrip latency, is the sum of:</p>
+<ul>
+<li>AD converter latency</li>
+<li>Input portion of the I/O buffer</li>
+<li>Audio driver latency</li>
+<li>Output portion of the I/O buffer</li>
+<li>DA converter latency</li>
+</ul>
+<p>When just doing playback, of course you don’t have to go trough all of these and the latency is the sum of:</p>
+<ul>
+<li>Audio driver latency</li>
+<li>Output portion of the I/O Buffer</li>
+<li>DA converter latency</li>
+</ul>
+<p>Now, let’s move on to the actual test:</p>
+<p>These where the candidates:</p>
+<p>Focusrite Pro40 (FW)<br/>
+RME Babyface (USB)<br/>
+RME Fireface 800 (FW)<br/>
+<em>“Lynx Aurora 8 (FW)”</em> Didn’t get this to speak well with OSX 10.7.1, or I had the wrong break-out cable.</p>
+<p>Focusrite ISA 828 (ADAT)</p>
+<p>I tested the I/O-latency by running a cable from the output to the input and measuring the delay with a program called MaxMSP.</p>
+<p>I used a MacBook Pro 6,2 (15″ mid 2010), 2,66GHz intel core i7, 4 GB 1067 MHz DDR3 ram, running Mac OS X Lion 10.7.1 (11B26).</p>
+<p><em>I/O vector size</em> and <em>signal vector size</em> as described in the MaxMSP manual:</p>
+<blockquote>
+<ul>
+<li>The <em>I/O Vector Size</em> (I/O stands for input/output) controls the number of samples that are transferred to and from the audio interface at one time.</li>
+<li>The <em>Signal Vector Size</em> sets the number of samples that are calculated by MSP objects at one time. This can be less than or equal to the I/O Vector Size, but not more. If the Signal Vector Size is less than the I/O Vector Size, MSP calculates two or more signal vectors in succession for each I/O vector that needs to be calculated.</li>
+<li>With an I/O vector size of 256, and a sampling rate of 44.1 kHz, MSP calculates about 5.8 milliseconds of audio data at a time.</li>
+</ul>
+<p>The <em>I/O Vector Size</em> may have an effect on latency and overall performance. A smaller vector size may reduce the inherent delay between audio input and audio output, because MSP has to perform calculations for a smaller chunk of time. On the other hand, there is an additional computational burden each time MSP prepares to calculate another vector (the next chunk of audio), so it is easier over-all for the processor to compute a larger vector. However, there is another side to this story. When MSP calculates a vector of audio, it does so in what is known as an interrupt. If MSP is running on your computer, whatever you happen to be doing (word processing, for example) is interrupted and an I/O vector’s worth of audio is calculated and played. Then the computer returns to its normally scheduled program. If the vector size is large enough, the computer may get a bit behind and the audio output may start to click because the processing took longer than the computer expected. Reducing the I/O Vector Size may solve this problem, or it may not. On the other hand, if you try to generate too many interrupts, the computer will slow down trying to process them (saving what you are doing and starting another task is hard work). Therefore, you’ll typically find the smaller I/O Vector Sizes consume a greater percentage of the computer’s resources. Optimizing the performance of any particular signal network when you are close to the limit of your CPU’s capability is a trial-and-error process. That’s why MSP provides you with a choice of vector sizes.</p></blockquote>
+<p>—–</p>
+<p>Babyface (USB), 44,1kHz, Line (XLR):</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 171 samples = 3.877551 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 203 samples = 4.603175 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 267 samples = 6.054422 ms</p>
+<p>I/O vector size: 1024, Signal vector size: 1024 = 2187 samples = 49.591835 ms</p>
+<p>Babyface (USB) + ISA 828, 44,1kHz, Line (XLR):</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 170 samples = 3.854875 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 202 samples = 4.580499 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 266 samples = 6.031746 ms</p>
+<p>I/O vector size: 1024, Signal vector size: 1024 = 2186 samples = 49.56916 ms</p>
+<p>Babyface (USB), 48kHz, Line (XLR):</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 171 samples = 3.5625 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 203 samples = 4.229167 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 267 samples = 5.5625 ms</p>
+<p>I/O vector size: 1024, Signal vector size: 1024 = 2187 samples = 45.5625 ms</p>
+<p>Babyface (USB) + ISA 828, 48kHz, Line (XLR):</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 170 samples = 3.541667 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 202 samples = 4.208333 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 266 samples = 5.541667 ms</p>
+<p>I/O vector size: 1024, Signal vector size: 1024 = 2186 samples = 45.541668 ms</p>
+<p>Babyface (USB), 96kHz, Line (XLR):</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 140 samples = 1.458333 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 263 samples = 2.739583 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 327 samples = 3.40625 ms</p>
+<p>I/O vector size: 1024, Signal vector size: 1024 = 2247 samples = 23.40625 ms</p>
+<p>Babyface (USB) + ISA 828, 96kHz, Line (XLR):</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 140 samples = 1.458333 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 263 samples = 2.739583 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 327 samples = 3.40625 ms</p>
+<p>I/O vector size: 1024, Signal vector size: 1024 = 2247 samples = 23.40625 ms</p>
+<p>Babyface (USB), 192kHz, Line (XLR):</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 116 samples = 0.604167 ms OUTPUT HAS POLARITY REVERSED<br/>
+I/O vector size: 32, Signal vector size: 32 = 228 samples = 1.1875 ms OUTPUT HAS POLARITY REVERSED<br/>
+I/O vector size: 64, Signal vector size: 64 = 422 samples = 2.197917 ms OUTPUT HAS POLARITY REVERSED</p>
+<p>I/O vector size: 1024, Signal vector size: 1024 = 2342 samples = 12.197917 ms OUTPUT HAS POLARITY REVERSED</p>
+<p>Fireface 800 (FW400 -&gt; 800), 44,1KHz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 219 samples = 4.965986 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 251 samples = 5.69161 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 315 samples = 7.142857 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 4283 samples = 97.120178 ms</p>
+<p>Fireface 800 (FW400 -&gt; 800) + ISA828, 44,1KHz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 213 samples = 4.83 ms OUTPUT HAS POLARITY REVERSED<br/>
+I/O vector size: 32, Signal vector size: 32 = 245 samples = 5.555555 ms OUTPUT HAS POLARITY REVERSED<br/>
+I/O vector size: 64, Signal vector size: 64 = 309 samples = 7.006803 ms OUTPUT HAS POLARITY REVERSED</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 4277 samples = 96.984123 ms OUTPUT HAS POLARITY REVERSED</p>
+<p>Fireface 800 (FW400 -&gt; 800), 48KHz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 219 samples = 4.5626 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 251 samples = 5.229167 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 315 samples = 6.5625 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 4284 samples = 89.25 ms</p>
+<p>Fireface 800 (FW400 -&gt; 800) + ISA828, 48KHz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 213 samples = 4.4375 ms OUTPUT HAS POLARITY REVERSED<br/>
+I/O vector size: 32, Signal vector size: 32 = 245 samples = 5.104167 ms OUTPUT HAS POLARITY REVERSED<br/>
+I/O vector size: 64, Signal vector size: 64 = 309 samples = 6.4375 ms OUTPUT HAS POLARITY REVERSED</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 4277 samples = 89.104164 ms OUTPUT HAS POLARITY REVERSED</p>
+<p>Fireface 800 (FW400 -&gt; 800), 96KHz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 188 samples = 1.958333 ms OUTPUT HAS POLARITY REVERSED<br/>
+I/O vector size: 32, Signal vector size: 32 = 348 samples = 3.625 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 412 samples = 4.291667 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 4380 samples = 45.625 ms</p>
+<p>Fireface 800 (FW400 -&gt; 800) + ISA828, 96KHz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 189 samples = 1.96875 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 347 samples = 3.614583 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 411 samples = 4.28125 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 4379 samples = 45.614582 ms</p>
+<p>Fireface 800 (FW400 -&gt; 800), 192KHz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 166 samples = 0.864583 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 326 samples = 1.697917 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 598 samples = 3.114583 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 4566 samples = 23.78125 ms</p>
+<p>Fireface 800 (FW400 -&gt; 800) + ISA828, 192KHz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 166 samples = 0.864583 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 326 samples = 1.697917 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 598 samples = 3.114583 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 4566 samples = 23.78125 ms</p>
+<p>Pro40, 44.1Khz, Line:</p>
+<p>I/O vector size: 16, Signal vector size: 16 = 5.827664 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 6.55328 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 8.004535 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 97.981857 ms</p>
+<p>Pro40 + ISA828, 44.1Khz, Line:<br/>
+I/O vector size: 16, Signal vector size: 16 = 6.485261 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 7.210885 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 8.662131 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 98.639458 ms</p>
+<p>Pro40, 48Khz, Line:<br/>
+I/O vector size: 16, Signal vector size: 16 = 5.354167 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 6.020833 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 7.354167 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 90.020836 ms</p>
+<p>Pro40 + ISA828, 48Khz, Line:<br/>
+I/O vector size: 16, Signal vector size: 16 = 5.958333 ms<br/>
+I/O vector size: 32, Signal vector size: 32 = 6.625 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 7.958333 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 90.625 ms</p>
+<p>Pro40, 96Khz, Line:</p>
+<p>I/O vector size: 32, Signal vector size: 32 = 5.541667 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 6.208333 ms<br/>
+I/O vector size: 128, Signal vector size: 128 = 7.541667 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 47.541668 ms</p>
+<p>Pro40 + ISA828, 96Khz, Line:<br/>
+I/O vector size: 32, Signal vector size: 32 = 5.916667 ms<br/>
+I/O vector size: 64, Signal vector size: 64 = 6.583333 ms<br/>
+I/O vector size: 128, Signal vector size: 128 = 7.916667 ms</p>
+<p>I/O vector size: 2048, Signal vector size: 2048 = 47.916668 ms</p>
+<p>—–</p>
+<p>Note that hardware with very slow transient response may decrease accuracy of measurement.</p>
+<p>When I connected the adat cable and the ISA was at 192kHz when I turned it on, I got super system failure …</p>
+<p>Here are some graphs, x=buffer size, y=latency in milliseconds:</p>
+<p><img alt="" border="0" decoding="async" loading="lazy" src="https://dl.dropbox.com/u/5427650/44100.png"/><br/>
+<img alt="" border="0" decoding="async" loading="lazy" src="https://dl.dropbox.com/u/5427650/48000.png"/><br/>
+<img alt="" border="0" decoding="async" loading="lazy" src="https://dl.dropbox.com/u/5427650/96000.png"/><br/>
+<img alt="" border="0" decoding="async" loading="lazy" src="https://dl.dropbox.com/u/5427650/192000.png"/></p>
+<p>—–</p>
+<p>One parameter I didn’t realize until later I should have measured is how different sound cards handle low latency also called LLP (Low Latency Performance), I didn’t record any numbers for this, as I didn’t know how to do it, but I experienced that the RME Babyface handled low buffer sizes quite well compared to the other cards, I used the “test section” in Ableton Live, which simulates a certain cpu-usage and lets you listen to a test tone and hear if there are any drop-outs.</p>
+<p>I also experienced that I could increase the sampling rate, thereby lowering the latency which is defined by samples in the buffer size, and still get good performance from the test tone. Any thoughts on sampling rate vs buffer size and how this affects the performance of the system? why choose low sampling rate and low buffer size, instead of high sampling rate and high buffer size, if they result in the same amount of latency? To get an answer to this and the concept of LLP, I had to seek help amongst other nerds at <a href="http://www.gearslutz.com">gearslutz.com</a> and I stumbled upon <a href="http://www.gearslutz.com/board/music-computers/618474-audio-interface-low-latency-performance-data-base.html">this forum thread</a> where they answered me on my issue on buffer size vs sampling rate:</p>
+<p>“TAFKAT”:</p>
+<blockquote><p>Raising the sample rate not only effects the latency value but also increases the overhead in DSP processing , throughput and data file sizes so its a balancing act. For those needing to work at the higher sample rates the usual practice is to raise the buffer sizes accordingly to compensate for the increase in processing overhead. There is no real advantage to increase the sample rate simply to lower the latency value if the higher sample rates are not specifically required for the project IMO.</p></blockquote>
+<p>“tuRnitUpsuM”:</p>
+<blockquote><p>(…) Higher sample rates do not equal lower latency in the bigger picture when you (action &lt;&gt; reaction) have to raise buffer values to compensate for increased DSP data overflow. Data size increases, time value increases to process the change. Whats gained on the front end – is lost on the back end.</p></blockquote>
+<p>My response:</p>
+<blockquote><p>Are these relations linear? From the numbers I ended up with, I got the impression that they’re not. Would there be any reason to measuring the sound cards LLP at different sample rates and see if the performance/sample-ratio is the same?</p>
+<p>For example: would a setup running 44.1KHz with a buffer size of 16 samples perform exactly equally to a setup running 88.2KHz with a buffer size of 32 samples on the same computer?</p></blockquote>
+<p>“Timur Born”:</p>
+<blockquote><p>There is a linear correlation and a non-linear one.</p>
+<p>Linear: Double the sample-rate at double the audio buffer size equals exactly the same audio buffer latency.</p>
+<p>Linear: Double the sample-rate equals exactly double the data/bandwidth the CPU + RAM + HD need to process, which at double the audio buffer size equals about half the number of tracks/fx being usable.</p>
+<p>Non-linear: AD/DA conversion is faster (=lower latency) with higher sample-rates. But we are talking about a maximum of 2 ms here, usually less.</p>
+<p>Non-linear: Your computer (CPU + RAM + HD) may not be able to deal with the number of “theoretically” possible tracks/fx, so either you may not get double the tracks/fx at half the sample-rate or may not get half the number of tracks/fx at double the sample-rate.</p></blockquote>
+<p>“TAFKAT”:</p>
+<blockquote><p>I don’t believe it will remain linear with the number of Plugins/Polyphony when using a higher sample rate at double the buffer to maintain the same latency, as the system still has to deal with the higher processing associated with the higher sample rate.</p>
+<p>It may be interesting to get an empirical value to the exact scaling variable , I have some 96K alternate sessions of DAWbench DSP that I will give a run up when I get some time and see what it tips up.</p></blockquote>
+<p>They also had developed quite an extensive database of the LLP’s of different audio interfaces. They used a benchmark program called <a href="http://www.dawbench.com/benchmarks.htm"><em>DAWbench DSP</em></a> to measure the LLP, keep in mind that some of these cards are high speed PCI cards (which soon is available to laptops trough thunderbolt expansion bays) and not USB or FW cards:</p>
+<p><a href="/wp-content/uploads/sites/8/2011/12/dawbench-audioint-22-10-11.jpg"><img alt="" class="alignnone size-full wp-image-656" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2011/12/dawbench-audioint-22-10-11.jpg" title="LLP v2"/></a></p>
+<p>I made a more graphical presentation of the mentioned LLP rating values, the numbers are all just in linear relevance to the best card, higher is better:</p>
+<p><a href="/wp-content/uploads/sites/8/2011/12/skjermbilde-2011-12-24-kl-11-03-42-am.png"><img alt="" class="alignnone size-full wp-image-661" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2011/12/skjermbilde-2011-12-24-kl-11-03-42-am.png" title="LLP v2 graph"/></a></p>
+<p>When researching on latency, after this point, it starts to get quite technical and the more I learn, the more I realize I don’t know. I feel that for now, I know enough about the subject to understand the latency and DSP performance of my current setup. I’ve learned that latency is not as relevant as I originally feared, and that there is more to the concept of latency and DSP than I thought.</p>
+</div>
+<nav class="post-footer">
+<a class="back-link" href="/archive/">← Back to archive</a>
+</nav>
+</article>
+</main>
+<footer class="site-footer">
+<div class="footer-inner">
+<p class="footer-tag">An archive of research and performance.</p>
+<p class="footer-meta">By Jonas Barsten · 2011 – 2017</p>
+</div>
+</footer>
+</body>
+</html>

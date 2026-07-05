@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Testing sensor system on a dancer – day 2 — Drums & Electronics</title>
+<meta name="description" content="Testing sensor system on a dancer – day 2">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23c1272d'/></svg>">
+</head>
+<body class="post-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="site-mark" href="/">
+    <span class="mark-disc" aria-hidden="true"></span>
+    <span class="mark-text"><em>Drums</em> &amp; Electronics</span>
+  </a>
+  <nav class="site-nav">
+    <a href="/archive/">Archive</a>
+    <a href="/about/">About</a>
+    <a href="/project-description-long/">Project</a>
+  </nav>
+</header>
+<main id="main">
+<article class="post">
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2012-02-15">February 15, 2012</time> · <span class="post-cats">Controllers · Sound Picking · Technical</span></p>
+    <h1 class="post-title">Testing sensor system on a dancer – day 2</h1>
+  </header>
+  <figure class="post-hero"><img src="/wp-content/uploads/sites/8/2013/05/p940.jpg" alt="Testing sensor system on a dancer – day 2" loading="eager"></figure>
+  <div class="post-body">
+    <h2>What:</h2>
+<p>I will test <a href="http://www.eowave.com/products.php?prod=57">Eowave’s Eobody2 HF</a> on a dancer.</p>
+<h2>Why:</h2>
+<p>I want to see if this system works with our project.</p>
+<h2>How:</h2>
+<p>I will have the sensors control simple parameters.</p>
+<h2>——–</h2>
+<p>After the <a href="http://drumsandelectronics.wordpress.com/2012/02/15/testing-sensor-system-on-a-dancer-day-1/" title="Testing sensor system on a dancer – day 1">first day we met</a> I made some enhancements to the setup.</p>
+<p><span style="color: #888888"><em>If anyone is interested, <a href="http://dl.dropbox.com/u/5427650/master/max/soundpicking%20v1.maxpat"><span style="color: #888888">this is the current MaxMSP-patch</span></a>.</em></span></p>
+<p>I consider pitch, speed and volume as three essential parameters to investigate further as those are quite relevant parameters in traditional music.</p>
+<p>In the first example, by turning her hand around the z-axis, the dancer would control the pitch and speed of a simple drum loop.</p>
+<p><span style="color: #888888"><em>The reason why we chose not to separate pitch and speed was that after some intents with just controlling the speed we felt that excluding pitch was very unnatural, probably because they both reinforce each others effect and historically we are used to them being tied together (slow down a tape or a vinyl and the pitch will drop).</em></span></p>
+<p><span style="color: #888888"><em>The <a href="http://drumsandelectronics.wordpress.com/2012/01/15/dancer-controlling-sound-with-sensors-idea-sketch/" title="Dancer controlling sound with sensors – Idea sketch"><span style="color: #888888">original idea</span></a> was that I would measure the distance between her hands to provoke this action, but we figured out that it would be easier to “fake” it by turning her hands while pulling them apart. I got this idea after an inspiring session with <a href="http://www.arj.no" title="Choosing the right sensor system for a dancer"><span style="color: #888888">Alexander Refsum Jensenius</span></a> who made it clear to me that to actually measure the distance between her hands was harder than I initially thought.</em></span></p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe allowfullscreen="true" class="youtube-player" height="360" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" src="https://www.youtube.com/embed/W0_OGL1Ua2c?version=3&amp;rel=0&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en-US&amp;autohide=2&amp;wmode=transparent" style="border:0;" width="640"></iframe></span>
+<p>As you can see, we are starting to enjoy this. And the system is behaving exactly as expected.</p>
+<p>Next, I made turning around the x-axis control the volume of the drum loop.</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe allowfullscreen="true" class="youtube-player" height="360" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" src="https://www.youtube.com/embed/dCmjdwvYOzs?version=3&amp;rel=0&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en-US&amp;autohide=2&amp;wmode=transparent" style="border:0;" width="640"></iframe></span>
+<p>It is quite obvious that the dancer found this somehow more boring, but it had to be tested and I think we can get a use for it because the link between the movement and the music is so clear.</p>
+<p>And again, the system is behaving exactly as expected.</p>
+<p>In the next test, I combined the two above, so turning around the z-axis will change the speed and pitch and turning around the x-axis will change the volume of the drum loop.</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe allowfullscreen="true" class="youtube-player" height="360" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" src="https://www.youtube.com/embed/xHufBFjuAEg?version=3&amp;rel=0&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en-US&amp;autohide=2&amp;wmode=transparent" style="border:0;" width="640"></iframe></span>
+<p>This clip is notably longer since the dancer is now inspired to explore the possibilities further and we felt that we were ready do to a test performance.</p>
+<p>I wanted to emulate that I was playing the drums since that is where we are going, so instead of the drum loop we used a loop from a <a href="http://drumsandelectronics.wordpress.com/2011/09/13/music-the-beginning/" title="Music – The Beginning">solo performance</a> I did almost a year ago.</p>
+<p>I also wanted to challenge the dancer with some other parameters. This time she controls delay feedback and pitch. You can see the parameters in Ableton Live being modulated in the upper left corner.</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe allowfullscreen="true" class="youtube-player" height="360" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" src="https://www.youtube.com/embed/sDwrpfibwM8?version=3&amp;rel=0&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en-US&amp;autohide=2&amp;wmode=transparent" style="border:0;" width="640"></iframe></span>
+<p>I like this. Of course it gets boring after a while, but I would gladly make this a part of a performance.</p>
+<p>If I were to play instead of the loop there would be an extremely direct interaction between the music and the dance: I would be playing with both what I hear and see the dancer do and she would be inspired by what I play and what she hear she is doing with the music.</p>
+<p>I have now applied for some funding to buy the sensor system and develop a performance with this setup.</p>
+<p>Even though this seem quite poor from an artistic point of view, I feel that we are on the right way to do something quite original and the possibilities of what this can bring are just starting to show.</p>
+<p>More on this project when money comes around.</p>
+  </div>
+  <nav class="post-footer">
+    <a class="back-link" href="/archive/">← Back to archive</a>
+  </nav>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-tag">An archive of research and performance.</p>
+    <p class="footer-meta">By Jonas Barsten · 2011 – 2017</p>
+  </div>
+</footer>
+</body>
+</html>

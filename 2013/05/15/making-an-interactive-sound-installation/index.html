@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Making an interactive sound installation — Drums & Electronics</title>
+<meta name="description" content="Making an interactive sound installation">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23c1272d'/></svg>">
+</head>
+<body class="post-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="site-mark" href="/">
+    <span class="mark-disc" aria-hidden="true"></span>
+    <span class="mark-text"><em>Drums</em> &amp; Electronics</span>
+  </a>
+  <nav class="site-nav">
+    <a href="/archive/">Archive</a>
+    <a href="/about/">About</a>
+    <a href="/project-description-long/">Project</a>
+  </nav>
+</header>
+<main id="main">
+<article class="post">
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2013-05-15">May 15, 2013</time> · <span class="post-cats">Bendik Hovik Kjeldsberg · Reflections · Shameless · Technical</span></p>
+    <h1 class="post-title">Making an interactive sound installation</h1>
+  </header>
+  <figure class="post-hero"><img src="/wp-content/uploads/sites/8/2013/05/p1105.jpg" alt="Making an interactive sound installation" loading="eager"></figure>
+  <div class="post-body">
+    <figure aria-describedby="caption-attachment-1120" class="wp-caption aligncenter" id="attachment_1120" style="width: 497px"><a href="/wp-content/uploads/sites/8/2012/04/shameless-exhibition-16-1024x682.jpg"><img alt="" class="size-full wp-image-1120" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/04/shameless-exhibition-16-1024x682.jpg" title="shameless-exhibition-16-1024x682"/></a><figcaption class="wp-caption-text" id="caption-attachment-1120">photo: bildernordic.no</figcaption></figure>
+<h2></h2>
+<h2>What</h2>
+<p>I will explain how <a href="http://drumsandelectronics.wordpress.com/category/1-projects/bendik-hovik-kjeldsberg/" rel="noopener noreferrer" target="_blank">Bendik Hovik Kjeldsberg</a> and I made an interactive sound installation.</p>
+<h2>Why</h2>
+<p>We were invited to make a sound installation.</p>
+<h2>How</h2>
+<p>I will go trough the process and discuss some issues we encountered.</p>
+<h2>——–</h2>
+<h3>About the exhibition:</h3>
+<p><a href="http://drumsandelectronics.wordpress.com/2011/12/23/music-bendik-hovik-kjeldsberg/" title="Performing an electronic composition">Bendik Hovik Kjeldsberg</a> and I were invited by <a href="http://www.bildernordic.no/">Bilder Nordic School of Photography</a> to contribute to an exhibition they called <a href="http://www.bildernordic.no/magazine/blog/magazine/shameless-2/">Shameless</a>:</p>
+<blockquote><p>«An exhibition by the graduating students  of Bilder Nordic School of Photography:</p>
+<p>SHAMLESS IS A REFLECTION ON SEXUALITY</p>
+<p>Sexuality is vital for our survival as a species and gives meaning to our lives. The simple function of reproduction is challenged by the complexity of our heart and brain.</p>
+<p>Shameless explores contemporary issues of identity in our society, and the notion of feeling ashamed. Self-image, fantasies, puberty, HIV, minority groups and children’s understanding of sexuality are some of the themes we look into.»</p>
+<p>from: bildernordic.no</p></blockquote>
+<p>The exhibition had over 5000 visitors and ran over a period of 10 days.</p>
+<h3>Placement:</h3>
+<p>They wanted sound to appear three places in the exhibition hall, all should be short sounds triggered by movement. These places and movements were:</p>
+<ol>
+<li>When someone went into a room.</li>
+<li>When someone laid down in a bed.</li>
+<li>When someone went to the toilet.</li>
+</ol>
+<h3>Sensors:</h3>
+<p>Wanting to keep things as simple as possible, we figured out that the sensors that would work for all three scenarios where contact microphones. Contact mics are cheap and robust and works well when you just need an on/off signal.</p>
+<p>We <a href="http://www.nicolascollins.com/hackingtutorial05.htm">soldered xlr plugs to some piezo elements</a> and we were ready to go.</p>
+<p>For a more sensitive installation, for example if we wanted to measure how fast some one went into the next room or how heavy the person laying in the bed was, we would have to use other kinds of sensors such as cameras and pressure sensors.</p>
+<h3>Speakers:</h3>
+<p>We used three pairs of small handheld speakers and pulled many meters of mini-jack extensions all over the exhibition, I was worried there would be some signal-loss because of the cable length and on the speakers furthest away and we had some problems getting the volume high enough, but still it served it’s purpose.</p>
+<h3>Sounds:</h3>
+<p>The thought behind the sounds didn’t emerge from a profound reflection over the theme “shameless”, it was rather a simple and naive way to make the audience feel embraced and some how present an aspect of sexuality in music.</p>
+<p>To find the sounds we needed we browsed an open source sound library, <a href="http://www.freesound.org/">freesound.org</a>, we also browsed some porn sites, but we found that quite embarrassing and couldn’t keep it serious.</p>
+<p>We chose to have two alternating sounds per area:</p>
+<iframe allowfullscreen="" height="450" loading="lazy" scrolling="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Fplaylists%2F2614990&amp;auto_play=false&amp;hide_related=false&amp;visual=false&amp;show_comments=false&amp;show_user=false&amp;show_reposts=false&amp;color=ff7700" width="100%"></iframe>
+<h3>System:</h3>
+<p><a href="/wp-content/uploads/sites/8/2012/04/shameless-patch.png"><img alt="" class="size-full wp-image-1127 aligncenter" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/04/shameless-patch.png" title="shameless-patch"/></a></p>
+<p>I made a standalone application in Max/MSP that ran on an iMac and we used an <a href="http://www.avid.com/US/products/mbox-pro">Avid Mbox Pro</a> sound card for in- and output.</p>
+<p>I had to define a limit for how frequent the sensors were active, if not, they would have triggered sounds all the time when there were many people in the exhibition hall. In the application you can define this your self in the number box called “antall sekunder å vente”.</p>
+<p>As you can see, the program is divided into four sections. The two faders to the left in each section decide the volume of left and right of the first sample, the two faders at the right decide the volume of the second sample, the fader in the middle decides the threshold for the volume needed from the contact microphone to trigger the sample. The “replace”-button lets you load new samples.</p>
+<p>The little square in the middle turns everything on and the “open”-button shows you audio preferences.</p>
+<h3>Downloads:</h3>
+<p><a href="http://dl.dropbox.com/u/5427650/master/max/shameless%20v4.zip">Standalone (MAC)</a></p>
+<p><a href="http://dl.dropbox.com/u/5427650/master/max/shameless.maxpat">Source Code (Max/MSP)</a></p>
+<p>As those of you familiar with Max/MSP might see, it was made in a hurry.</p>
+<p>As I had to make the application in the exhibition hall with a limited amount of time, it ended up quite unsymmetrical and with a language mixture of English and Norwegian, this however reminded me that the patches doesn’t have to look good to work as a one-task-tool that only I have to look at. In this scenario it is more important to get it up and running and focusing on the overall experience of the installation rather than on the layout of the program running it.</p>
+<h4>Stability:</h4>
+<p>The system ran flawlessly for 10 days in a row without being turned off (except from when a girl turned off the sound card since it “was so warm”), so it is extremely stable, I was at least expecting to have to go down there once to fix it, but it just worked.</p>
+<h3>Reactions:</h3>
+<p>On the day of the opening, the exhibition hall was packed with people and the sounds on the bed and when passing into the other room didn’t quite come to it’s right because of all the chattering and frequent triggering of the sounds. But the setup in the toilet was rather successful since there were constantly people going there and they shared their experiences with the people standing in line when they leaved the toilet, so people started talking about the embarrassing experience of going to the toilet. Due to the nature of the triggered sounds (as sown above), to the presence of a dildo and challenging pictures in the bathroom and to the volume level on the speakers placed there, I must say it made quite an impression having to take a pee in those circumstances.</p>
+<h3>Timelaps:</h3>
+<div class="embed-vimeo" style="text-align: center;"><iframe allowfullscreen="" height="281" loading="lazy" src="https://player.vimeo.com/video/38431705" width="500"></iframe></div>
+<p>Thanks to Anders Tveit for lending us some piezo elements.</p>
+  </div>
+  <nav class="post-footer">
+    <a class="back-link" href="/archive/">← Back to archive</a>
+  </nav>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-tag">An archive of research and performance.</p>
+    <p class="footer-meta">By Jonas Barsten · 2011 – 2017</p>
+  </div>
+</footer>
+</body>
+</html>

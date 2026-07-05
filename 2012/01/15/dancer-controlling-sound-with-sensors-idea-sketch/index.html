@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dancer controlling sound with sensors – Idea sketch — Drums & Electronics</title>
+<meta name="description" content="Dancer controlling sound with sensors – Idea sketch">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23c1272d'/></svg>">
+</head>
+<body class="post-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="site-mark" href="/">
+    <span class="mark-disc" aria-hidden="true"></span>
+    <span class="mark-text"><em>Drums</em> &amp; Electronics</span>
+  </a>
+  <nav class="site-nav">
+    <a href="/archive/">Archive</a>
+    <a href="/about/">About</a>
+    <a href="/project-description-long/">Project</a>
+  </nav>
+</header>
+<main id="main">
+<article class="post">
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2012-01-15">January 15, 2012</time> · <span class="post-cats">Controllers · Reflections · Sound Picking · Technical</span></p>
+    <h1 class="post-title">Dancer controlling sound with sensors – Idea sketch</h1>
+  </header>
+  <figure class="post-hero"><img src="/wp-content/uploads/sites/8/2012/01/lydplukking-e1368445521324.jpg" alt="Dancer controlling sound with sensors – Idea sketch" loading="eager"></figure>
+  <div class="post-body">
+    <figure aria-describedby="caption-attachment-751" class="wp-caption aligncenter" id="attachment_751" style="width: 1936px"><a href="/wp-content/uploads/sites/8/2012/01/lydplukking.jpg"><img alt="" class="wp-image-751" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/01/lydplukking-e1326646579388.jpg" title="lydplukking"/></a><figcaption class="wp-caption-text" id="caption-attachment-751">foto: Jonas Barsten Johnsen</figcaption></figure>
+<blockquote><p>(…) a sensor based setup for a dancer and a drummer, where the dancer can pick up sounds played by the drummer and process them with movement (…)</p>
+<p>My <a href="http://drumsandelectronics.wordpress.com/project-description-long/" rel="noopener noreferrer" target="_blank" title="Project description">project description</a></p></blockquote>
+<h2>What:</h2>
+<p>Dancer wearing sensors – controlling sound.</p>
+<p><span style="color: #999999"><em>The idea is that the dancer can approach my drum set (sound source) and pick up the sounds I am making at that instant. Then he or she can modulate the sounds with movements and try to make it artistically interesting and fitting to the rest of the music if there is any.</em></span></p>
+<h2>Why:</h2>
+<p>Concrete interaction between music and dance.</p>
+<p><span style="color: #999999"><em>The main motivation behind this is that I want to experience a more concrete interaction between a dancers movements and a musician sounds in a live performance setting.</em></span></p>
+<h2>How:</h2>
+<p>I will make a patch in <a href="http://www.cycling74.com">Max/MSP</a>, buy sensors and rehears with a dancer.</p>
+<h2>Equipment and procedure:</h2>
+<p>The dancer will have to wear some kind of gloves and maybe some socks/shoes with the following sensors:</p>
+<h4 style="text-align: center">Gyroscope:</h4>
+<figure aria-describedby="caption-attachment-757" class="wp-caption aligncenter" id="attachment_757" style="width: 497px"><a href="/wp-content/uploads/sites/8/2012/01/3d_gyroscope.png"><img alt="" class="size-full wp-image-757" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/01/3d_gyroscope.png" title="3D_Gyroscope"/></a><figcaption class="wp-caption-text" id="caption-attachment-757">foto: wikipedia.org</figcaption></figure>
+<p style="padding-left: 30px;text-align: center">A gyroscope is a device for measuring or maintaining orientation, based on the principles of <a href="http://en.wikipedia.org/wiki/Angular_momentum" title="Angular momentum">angular momentum</a>. Thanks to the fast development in smartphone technology they are now extremely small and quite cheap and can look for example like this (not the coin):</p>
+<figure aria-describedby="caption-attachment-758" class="wp-caption aligncenter" id="attachment_758" style="width: 497px"><a href="/wp-content/uploads/sites/8/2012/01/09070-04-l.jpg"><img alt="" class="wp-image-758" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/01/09070-04-l.jpg" title="09070-04-L"/></a><figcaption class="wp-caption-text" id="caption-attachment-758">foto: sparkfun.com</figcaption></figure>
+<p style="padding-left: 30px;text-align: center">In this context the gyroscope will be used mainly for detecting the rotation of the dancers feet and hands.</p>
+<p style="padding-left: 30px;text-align: center">More on gyroscope sensors <a href="http://www.sensorwiki.org/doku.php/sensors/gyroscope">here.</a></p>
+<h4 style="text-align: center">Flexion (bend):</h4>
+<blockquote><p><strong>Flexion sensors</strong>, (from Latin flectere, ‘to bend’) also called <strong>bend sensors</strong>, measure the amount of deflection caused by bending the sensor. There are various ways of sensing deflection, from strain-gauges<sup>1)</sup> to hall-effect sensors<sup>2)</sup>. The three most common types of flexion sensors are:</p>
+<ul>
+<li>
+<div>conductive ink-based</div>
+</li>
+<li>
+<div>fibre-optic</div>
+</li>
+<li>
+<div>conductive fabric/thread/polymer-based</div>
+</li>
+</ul>
+<p>www.sensorwiki.org</p></blockquote>
+<figure aria-describedby="caption-attachment-762" class="wp-caption aligncenter" id="attachment_762" style="width: 497px"><a href="/wp-content/uploads/sites/8/2012/01/fabricbendsensor_alpha_.png"><img alt="" class="size-full wp-image-762" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/01/fabricbendsensor_alpha_.png" title="fabricbendsensor_alpha_"/></a><figcaption class="wp-caption-text" id="caption-attachment-762">foto: sensorwiki.org</figcaption></figure>
+<p style="padding-left: 30px;text-align: center">The flexion sensors will be used to detect when the dancer is closing or opening his or her hands.</p>
+<p style="padding-left: 30px;text-align: center">More on flexion sensors <a href="http://www.sensorwiki.org/doku.php/sensors/flexion">here</a>.</p>
+<h4>Distance (Infrared):</h4>
+<p style="padding-left: 30px;text-align: center">These sensors uses infrared light whose waves are those just below the visible spectrum of frequencies. I will use one of these to determine the distance between the dancers hands.</p>
+<figure aria-describedby="caption-attachment-763" class="wp-caption aligncenter" id="attachment_763" style="width: 300px"><a href="/wp-content/uploads/sites/8/2012/01/gp2d120-infrared-distance-sensor.jpg"><img alt="" class="size-full wp-image-763" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/01/gp2d120-infrared-distance-sensor.jpg" title="gp2d120-infrared-distance-sensor"/></a><figcaption class="wp-caption-text" id="caption-attachment-763">foto: mcustore.com</figcaption></figure>
+<p style="padding-left: 30px;text-align: center">More on infrared sensors<a href="http://www.sensorwiki.org/doku.php/sensors/infrared"> here.</a></p>
+<h4 style="text-align: center">Radio-frequency identification:</h4>
+<p style="padding-left: 30px">Radio-frequency identification (RFID) is a technology that uses radio waves to transfer data from an electronic tag, called RFID tag or label, attached to an object, through a reader for the purpose of identifying and tracking the object.</p>
+<p style="padding-left: 30px">I will place a RFID tag on the dancer and RFID readers by the drums and in the buckets (see explanation further down) or the other way around so that when he or she gets close to the buckets or drums it gets registered.</p>
+<p style="padding-left: 30px">RFID tags can look like this:</p>
+<figure aria-describedby="caption-attachment-769" class="wp-caption aligncenter" id="attachment_769" style="width: 497px"><a href="/wp-content/uploads/sites/8/2012/01/button_rfid_tag_for_guard_tour_system.jpg"><img alt="" class="size-full wp-image-769" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/01/button_rfid_tag_for_guard_tour_system.jpg" title="button_RFID_Tag_for_Guard_tour_system"/></a><figcaption class="wp-caption-text" id="caption-attachment-769">foto: alibaba.com</figcaption></figure>
+<p style="padding-left: 30px;text-align: center">RFID readers can look like this:</p>
+<figure aria-describedby="caption-attachment-770" class="wp-caption aligncenter" id="attachment_770" style="width: 400px"><a href="/wp-content/uploads/sites/8/2012/01/1023_1_web.jpg"><img alt="" class="size-full wp-image-770" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2012/01/1023_1_web.jpg" title="1023_1_Web"/></a><figcaption class="wp-caption-text" id="caption-attachment-770">foto: phidgets.com</figcaption></figure>
+<p style="padding-left: 30px;text-align: center">More on RFID sensors <a href="http://www.sensorwiki.org/doku.php/sensors/radio_frequency_identification">here.</a></p>
+<h4>Movement tracking:</h4>
+<p>I would also like to track the dancers movement on stage, for example with a <a href="http://en.wikipedia.org/wiki/Kinect">Kinect</a> so that the sounds that are being carried can be panned to the corresponding location on stage.</p>
+<h4>Buckets:</h4>
+<p>The idea also includes some buckets with RFID sensors where the dancer can place the sounds so that they stay looped while he or she continues the performance. It would also be convenient with some lights in the buckets representing if they contain a loop or not.</p>
+<p>…</p>
+<h3>Mapping:</h3>
+<p>Once again the most challenging factor is the mapping, mapping is to choose what the sensors/controllers should do. A crucial point for me is that the sensors functions are obvious.</p>
+<p>I am not quite sure of the <strong>gyroscopes</strong> function yet, but I guess it will be a filter, delay, distortion or a reverb or a combination of all of them. I could of course say that the dancers placement on stage or another parameter should decide what effect to use, but I will try to keep my feet at the ground and restrict my self until further on in the process so that it will be easier to start working on it.</p>
+<p>The two <strong>flexion</strong> sensors are to decide when to start and stop the looping and also the initial length of the loop. When the left hand closes (if the dancer is close to the drums) is sets the starting point for the loop/starts recording into the looper, when the right hand is closed the en point is set and the loop starts playing. When both hands are opened again the loop stops.</p>
+<p>The <strong>distance</strong> sensor in one of the hands sees the distance to the other hand and, if a loop is playing, decides the speed and pitch (not sure about pitch yet) of the loop. When the hands are closer, the loop plays faster and when the hands are further apart, the loop plays slower.</p>
+<p>The <strong>RFID</strong> sensors, as already mentioned, are to decide if the dancer can record new sounds or not and to tell when a sound is supposed to keep on looping “in a bucket”. If the closed hand is in a bucket wile it is released, it keeps on looping and the dancer can go make another loop.</p>
+<p>So the left hand has:</p>
+<ul>
+<li>Flexion.</li>
+<li>Gyroscope.</li>
+<li>RFID.</li>
+</ul>
+<p>The right hand has:</p>
+<ul>
+<li>Flexion.</li>
+<li>Gyroscope.</li>
+<li>Distance.</li>
+</ul>
+<p>For now, the feet will just have each their gyroscope.</p>
+<h2>Hypothesis:</h2>
+<p>I think the first rehearsal will just be amusement over the feeling to “touch sound” and over-using it – like when a guitarist gets a new pedal. Further down the road we will probably encounter problems if we want to play in time and we want loops to be in sync, then I will have to create some kind of transport control and we will need a metronome or backing track.</p>
+<p>I think the main challenge will be for the dancer to merge the performance of music and dance. I might have to compose something that he or she can dance, maybe not down to the finest detail, but I think it will be a challenge to improvise well with this setup, then again, hopefully I am wrong.</p>
+<h2>Reflection:</h2>
+<p>We will obviously have to practice a lot to make the end result a good experience. I feel that the concept is not strong enough to stand by it self for more than the first 5 minutes of amusement over the technology. I might realize that this is just a dead end, but I have a strong feeling it will not result in that because of earlier experiences with the common denominator between music and dance (see the “Dancers-section of this blog).</p>
+<p>Special thanks to Haakon Berg Mathisen for thoughts on how to write well for the internet.</p>
+  </div>
+  <nav class="post-footer">
+    <a class="back-link" href="/archive/">← Back to archive</a>
+  </nav>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-tag">An archive of research and performance.</p>
+    <p class="footer-meta">By Jonas Barsten · 2011 – 2017</p>
+  </div>
+</footer>
+</body>
+</html>

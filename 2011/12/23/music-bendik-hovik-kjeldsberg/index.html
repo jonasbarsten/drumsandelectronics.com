@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Performing an electronic composition — Drums & Electronics</title>
+<meta name="description" content="Performing an electronic composition">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..900,0..100&family=Manrope:wght@300..800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+<link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='%23c1272d'/></svg>">
+</head>
+<body class="post-page">
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a class="site-mark" href="/">
+    <span class="mark-disc" aria-hidden="true"></span>
+    <span class="mark-text"><em>Drums</em> &amp; Electronics</span>
+  </a>
+  <nav class="site-nav">
+    <a href="/archive/">Archive</a>
+    <a href="/about/">About</a>
+    <a href="/project-description-long/">Project</a>
+  </nav>
+</header>
+<main id="main">
+<article class="post">
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2011-12-23">December 23, 2011</time> · <span class="post-cats">Bendik Hovik Kjeldsberg · Reflections · Technical</span></p>
+    <h1 class="post-title">Performing an electronic composition</h1>
+  </header>
+  <figure class="post-hero"><img src="/wp-content/uploads/sites/8/2013/05/p395.jpg" alt="Performing an electronic composition" loading="eager"></figure>
+  <div class="post-body">
+    <p><a href="/wp-content/uploads/sites/8/2011/11/november-1-061_leveljustert.jpg"><img alt="" class="alignnone size-full wp-image-488" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2011/11/november-1-061_leveljustert.jpg" title="Bendik"/></a></p>
+<p>Bendik Hovik Kjeldsberg is studying composition at the same Academy as I am doing my master degree.</p>
+<p>He asked me to perform one of his compositions with him.</p>
+<p>Since the composition’s nature is very electronic it presented some challenges when we were to perform it.</p>
+<p>Listen to the composition here, keep in mind that this is intended to be a score and that the actual composition is what we perform based on this:</p>
+<iframe allowfullscreen="" height="166" loading="lazy" scrolling="no" src="https://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26695239&amp;width=false&amp;height=false&amp;auto_play=false&amp;hide_related=false&amp;visual=false&amp;show_comments=false&amp;color=false&amp;show_user=false&amp;show_reposts=false" width="100%"></iframe>
+<p>After some intents to solve this with Ableton Live, I decided the best way would be to just use MaxMsp for this project. I’ll elaborate later in the following text.</p>
+<p>The first “blipp”-sounds that appear I wanted to play by triggering them one at a time in a sequence. In Ableton I could slice the track to MIDI on it’s transients, then extract each section, put them one after another in an audio track as clips, than map the MIDI-signal generated from the amplitude of the input signal to “next scene” and set global quantization to “none”. But it is quite self-explanatory that this is not particularly favorable.</p>
+<p>As an alternative I tried to figure out how to do transient-detection on an audio file in Max, and then play the transients one after another, but I ended up manually putting all the transients locations in millisecond format in a [coll] object, then triggering them one at a time trough a [play~] object.</p>
+<p>I’ve been looking into the [slice~] object, but I haven’t quite figured it out yet.</p>
+<p>I’m extremely open for suggestions on this subject.</p>
+<p>Our main intention with the performance of the piece was that the sounds Kjeldsberg had created in advance should be our instrument and what we performed should only be based on the mentioned composition and not contain any backing tracks. We achieved this using the following methods:</p>
+<p>– All the sounds Kjeldsberg wanted to use where broken apart to as small pieces as we saw convenient.</p>
+<p>– All drum sounds that I could manage to play at one time where removed from Kjeldsbergs setup.</p>
+<p>– Sounds that were layered with these drum sounds were triggered by the corresponding drum using <a href="http://dl.dropbox.com/u/5427650/master/max/bendik%20-%20toms.maxpat">this max patch</a> I made.</p>
+<p>– Since the mentioned layered sounds changed during the performance, I added the ability to in real time change the sound that were to be triggered.</p>
+<p>…</p>
+<p>Kjeldsberg wanted to play both a melody line and a bass line at the same time with one one hand while triggering samples with the other hand.</p>
+<p>Since the melody and bass line were not unison, that presented a challenge.</p>
+<p>Bendik wanted to play the top melody line shown in the picture bellow while triggering the corresponding bass notes. We could of course have triggered a clip containing the bass notes in a certain tempo he would have to follow, but then we would loose his unique phrasing.</p>
+<p><a href="/wp-content/uploads/sites/8/2011/11/14.png"><img alt="" class="alignnone size-full wp-image-433" decoding="async" loading="lazy" src="/wp-content/uploads/sites/8/2011/11/14.png" title="Bendik - MIDI"/></a></p>
+<p>So I made a <a href="http://dl.dropbox.com/u/5427650/master/max/toms%20harmony.amxd" rel="noopener noreferrer" target="_blank">Max for Live patch</a> that triggers each notes corresponding bass notes (some of the top notes are harmonized with different bass notes) in the right sequence, only problem is that the performer have to press a “reset sequence”-button for each time he or she plays it. I could have had the sequence restart when the last note is played, but we figured out that this was the easiest and most convenient method in this context.</p>
+<p>…</p>
+<p>I enjoy this way of interpreting a composition since it’s a lot like how I’ve been working earlier when extracting sounds from pieces I like. But then again this IS the actual composition as the composer intended it to be, in earlier examples I’ve only extracted sounds to make them part of a new, improvised piece.</p>
+<p>In a way this is like going back to the original way of composing, where the composer didn’t make the final auditive experience, but rather a score for the performers or conductor to interpret. And since there are not yet instruments capable of making most of these sounds, we have to modify our own instruments to perform the composers intentions. Again, this is a fairly strange thought, since it is some how comparable to that some one writing a piano piece before the piano was even invented. This also incorporates the role of the instrument maker into what’s expected from the performer and/or the composer.</p>
+<p>Here is a video from a concert where we perform the piece (the picture gets more descriptive at 2:00):</p>
+<span class="embed-youtube" style="text-align:center; display: block;"><iframe allowfullscreen="true" class="youtube-player" height="360" loading="lazy" sandbox="allow-scripts allow-same-origin allow-popups allow-presentation" src="https://www.youtube.com/embed/YtOosfga-kc?version=3&amp;rel=1&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;fs=1&amp;hl=en-US&amp;autohide=2&amp;wmode=transparent" style="border:0;" width="480"></iframe></span>
+  </div>
+  <nav class="post-footer">
+    <a class="back-link" href="/archive/">← Back to archive</a>
+  </nav>
+</article>
+</main>
+<footer class="site-footer">
+  <div class="footer-inner">
+    <p class="footer-tag">An archive of research and performance.</p>
+    <p class="footer-meta">By Jonas Barsten · 2011 – 2017</p>
+  </div>
+</footer>
+</body>
+</html>
